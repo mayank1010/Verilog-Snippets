@@ -111,7 +111,7 @@ module Pipeline(parity,alu_out,enc_out,clk,A,B,inp_code,reset);
     output [3:0] alu_out;
     output [2:0] enc_out;
     wire [3:0] aluinp1,aluinp2,parity_inp;
-    wire [2:0] op_code;
+    wire [3:0] op_code;
     reg_4bit alusrc1(aluinp1,clk,A,reset);
     reg_4bit alusrc2(aluinp2,clk,B,reset);
     encoder enc(enc_out,inp_code);
